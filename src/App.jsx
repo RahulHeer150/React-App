@@ -12,7 +12,7 @@ function App() {
     <div className='flex justify-center items-center min-h-screen bg-gray-900'>
       <Postcard 
      imgPath={Image}
-      title="I K gujral Punjab technical University"
+      title="I K gujral Punjab technical University kap"
       description="this is a state government universiy established on 1997 at jalandhar Kapurthala highway."
       />
       <Postcard
