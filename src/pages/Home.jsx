@@ -28,6 +28,14 @@ const Home = () => {
     );
   };
 
+  const updateTodo = (id, newText) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText } : todo
+      )
+    );
+  }
+
   return (
     <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md flex flex-col items-center">
       <h1 className="text-2xl font-bold mb-4">To-Do App</h1>
@@ -39,6 +47,7 @@ const Home = () => {
         todos={todos}
         deleteTodo={deleteTodo}
         toggleTodo={toggleTodo}
+        updateTodo={updateTodo}
       />
     </div>
   );

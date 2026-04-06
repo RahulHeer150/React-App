@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+useState
 
 const TodoItem = ({todo, deleteTodo,toggleTodo}) => {
+  // const [isEditing, setIsEditing] = useState(false);
+  // const [editText, setEditText] = useState(todo.text);
+
+  // const handleSave = () => {
+  //   updateTodo(todo.id, editText);
+  //   setIsEditing(false);
+  // };
+
   return (
 
     <div className='flex items-center justify-between mb-2'>
         <span 
         onClick={()=>toggleTodo(todo.id)}
-        className={todo.completed ? 'line-through' : ''}
+        className={todo.completed ? 'text-green-500' : ''}
         >
             {todo.text}
         </span>
