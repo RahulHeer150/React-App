@@ -1,8 +1,18 @@
 import React from 'react'
 
-const TodoItem = () => {
+const TodoItem = ({todo, deleteTodo,toggleTodo}) => {
   return (
-    <div>TodoItem</div>
+
+    <div>
+        <span 
+        onClick={()=>toggleTodo(todo.id)}
+        className={todo.completed ? 'line-through' : ''}
+        >
+            {todo.text}
+        </span>
+        <button onClick={()=>deleteTodo(todo.id)}>Delete</button>
+
+    </div>
   )
 }
 
